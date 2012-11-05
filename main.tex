@@ -21,8 +21,7 @@
 \usepackage{subfigure}
 \usepackage{caption}
 \usepackage{excludeonly}
-
-\usepackage{graphicx} 
+\usepackage{CJK}
 
 %\usepackage{doc}
 %% Following sets up logic and formatting for conditional twoside copying
@@ -215,9 +214,18 @@ After we went through the stock holdings of the company from Yahoo Finance, it h
 \caption[Optional caption for list of figures]{Engenvalue and eigenvector of the correlation matrix}
 \label{fig:subfigureExample}
 \end{figure}
-We conducted the PCA analysis in the following steps:
+Until now, we've finished the PCA analysis of the 21 stocks Jabre Capital held for the entire year. We conducted the PCA analysis in the following steps:
 \begin{enumerate}
-\item We standardized the return matrix using R and got the standardized return matrix(51*21),
+\item We downloaded historical prices of the 21 stocks in year 2011 from Yahoo Finance, 
+\item we developed weekly return spreadsheet based on the formula as shown below:
+\begin{equation}
+R =\frac{P_n-P_{n-1}}{P_{n-1}}\\
+\end{equation}
+\begin{tabbing}
+\quad \= $R$ -- Weekly Return\\
+\quad \=$P_n$  -- Adjusted closing price of nth week in year 2011\\
+\end{tabbing}
+\item standardized the return matrix using R and got the standardized return matrix(51*21),
 \item we calculated the correlation matrix,
 \item we linearized the correlation matrix into independent eigenvectors and corresponding eigenvalues as shown above, and the plot accordingly.
 \end{enumerate}
@@ -227,7 +235,7 @@ Because the space is limited, we don't provide the complete eigenvector matrix h
     \begin{center}
         \includegraphics[width=\textwidth]{5.png}
     \end{center}
-    \caption{Jabre Capital's Portfolio Selection in 2011}
+    \caption{PCA analysis result}
     \label{fig:eigenvector}
 \end{figure}
 
@@ -235,7 +243,7 @@ Because the space is limited, we don't provide the complete eigenvector matrix h
 \chapter{Conclusion}\label{Conclusion}
 The PCA analysis result shows that the first three eigenvectors can explain appoxiamately 72.62\% of the variance of the portforlio. So we believe that the correlation among the 21 stocks is relatively high and the portforlio is not well diversified. In this case, the portfolio is more risky than the other well diversified portfolios. 
 
-In the future reseach, we will mainly look into if adding more stocks from different industries, asset classes and commodities will improve the result.
+In the future work, we will mainly look into if adding back stocks according to quarterly holdings will improve the result or not. If the diversification situation wosen after adding stocks back, we will help Jabre Capital to eliminate unnecessary stocks. 
 
 %\include{chapter1}
 %\include{chapter2}
@@ -262,6 +270,9 @@ In the future reseach, we will mainly look into if adding more stocks from diffe
 
 \vspace{8pt}
 \noindent {\bf Unsystematic Risk}. The portion of an asset’s risk attributable to market factors that affect all firms such as war, inflation, international incidents, and political events. 
+
+\vspace{8pt}
+\noindent {\bf Adjusted Closing Price}. A stock's closing price on any given day of trading that has been amended to include any distributions and corporate actions that occurred at any time prior to the next day's open. The adjusted closing price is often used when examining historical returns or performing a detailed analysis on historical returns.
 
 %\vspace{8pt} \noindent {\bf Footprint}. The intersection of a visibility cone with the surface of the earth.
 %
