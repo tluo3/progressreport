@@ -217,7 +217,7 @@ After we went through the stock holdings of the company from Yahoo Finance, it h
 Until now, we've finished the PCA analysis of the 21 stocks Jabre Capital held for the entire year. We conducted the PCA analysis in the following steps:
 \begin{enumerate}
 \item We downloaded historical prices of the 21 stocks in year 2011 from Yahoo Finance, 
-\item we developed weekly return spreadsheet based on the formula as shown below:
+\item We developed weekly return spreadsheet based on the formula as shown below:
 \begin{equation}
 R =\frac{P_n-P_{n-1}}{P_{n-1}}\\
 \end{equation}
@@ -225,9 +225,9 @@ R =\frac{P_n-P_{n-1}}{P_{n-1}}\\
 \quad \= $R$ -- Weekly Return\\
 \quad \=$P_n$  -- Adjusted closing price of nth week in year 2011\\
 \end{tabbing}
-\item standardized the return matrix using R and got the standardized return matrix(51*21),
-\item we calculated the correlation matrix,
-\item we linearized the correlation matrix into independent eigenvectors and corresponding eigenvalues as shown above, and the plot accordingly.
+\item We standardized the return matrix using R and got the standardized return matrix(51*21),
+\item We calculated the correlation matrix,
+\item We linearized the correlation matrix into independent eigenvectors and corresponding eigenvalues as shown above, and the plot accordingly.
 \end{enumerate}
 
 Because the space is limited, we don't provide the complete eigenvector matrix here. We don't provide the standardized matrix and correlation matrix, either. This information will be provided upon request.
@@ -243,7 +243,7 @@ Because the space is limited, we don't provide the complete eigenvector matrix h
 \chapter{Conclusion}\label{Conclusion}
 The PCA analysis result shows that the first three eigenvectors can explain appoxiamately 72.62\% of the variance of the portforlio. So we believe that the correlation among the 21 stocks is relatively high and the portforlio is not well diversified. In this case, the portfolio is more risky than the other well diversified portfolios. 
 
-In the future work, we will mainly look into if adding back stocks according to quarterly holdings will improve the result or not. If the diversification situation wosen after adding stocks back, we will help Jabre Capital to eliminate unnecessary stocks. 
+In the future work, we will mainly look into if adding back stocks according to quarterly holdings will improve the result or not. If the diversification situation worsens after adding stocks back, we will help Jabre Capital to eliminate unnecessary stocks. 
 
 %\include{chapter1}
 %\include{chapter2}
